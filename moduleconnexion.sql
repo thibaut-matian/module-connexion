@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS moduleconnexion;
+
+USE moduleconnexion;
+
+CREATE TABLE IF NOT EXISTS utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(255) NOT NULL UNIQUE,
+    prenom VARCHAR(255) NOT NULL,
+    nom VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO `utilisateurs`(`id`, `login`, `prenom`, `nom`, `password`) VALUES 
+(1,'admin','admin','admin','admin');
+
